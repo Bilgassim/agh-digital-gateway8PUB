@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -81,9 +83,16 @@ const Footer = () => {
           <p className="text-sm text-muted-foreground">
             © {currentYear} AGH Data Agency Holding SA. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground">
-            Remote First • BYOD Policy • Global Team
-          </p>
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <Link 
+              to="/terms-and-conditions" 
+              className="hover:text-primary transition-colors"
+            >
+              Terms & Conditions
+            </Link>
+            <span>•</span>
+            <span>Remote First • BYOD Policy</span>
+          </div>
         </div>
       </div>
     </footer>
